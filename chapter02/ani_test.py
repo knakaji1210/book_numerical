@@ -20,7 +20,7 @@ def ani_test():
         print(x_list)
     return imgs
 
-fig_title = "XXX"
+fig_title = "Animation Test"
 plot_lim = 30
 
 fig = plt.figure()
