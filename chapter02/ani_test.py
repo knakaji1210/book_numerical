@@ -31,7 +31,7 @@ ax.grid(axis='both', color="gray", lw=0.5)
 imgs = ani_test()
 
 ani = animation.ArtistAnimation(fig, imgs, interval=10)
-ani.save('./gif/ani_test2.gif', writer = 'pillow', fps = 30)
+ani.save('./gif/ani_test.gif', writer = 'pillow', fps = 30)
 
 plt.show()
 plt.close()
