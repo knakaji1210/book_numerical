@@ -40,5 +40,9 @@ for xvalue in x:
 
 # グラフの描画
 plt.plot(t, xList)  # グラフをプロット
+
+savefile = "./png/godefreefall.png"
+plt.savefig(savefile, format="png", dpi=300)
+
 plt.show()
 # godefreefall.pyプログラムの終わり

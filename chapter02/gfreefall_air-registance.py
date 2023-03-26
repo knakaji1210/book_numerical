@@ -38,5 +38,9 @@ while x >= 0:               # 地面に達するまで計算
 
 # グラフの描画
 plt.plot(tlist, xlist)  # グラフをプロット
+
+savefile = "./png/gfreefall_air-registance.png"
+plt.savefig(savefile, format="png", dpi=300)
+
 plt.show()
 # gfreefal_air-registance.pyプログラムの終わり

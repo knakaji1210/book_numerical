@@ -57,5 +57,9 @@ ax1.grid()
 ax2.legend()
 ax2.set_ylim(-ylim,ylim)
 ax2.grid()
+
+savefile = "./png/gfreefall_Euler.png"
+fig.savefig(savefile, format="png", dpi=300)
+
 plt.show()
 # freefall_Euler.pyプログラムの終わり

@@ -50,5 +50,9 @@ while (x >= 0) and (x <= x0):    # 地面に達するか初期高度より高く
 
 # グラフの描画
 plt.plot(tlist, xlist)  # グラフをプロット
+
+savefile = "./png/glander.png"
+plt.savefig(savefile, format="png", dpi=300)
+
 plt.show()
 # lander.pyプログラムの終わり

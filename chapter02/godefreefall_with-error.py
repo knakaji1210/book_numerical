@@ -54,6 +54,10 @@ ax1.grid()
 ax2.legend()
 ax2.set_ylim(-ylim,ylim)
 ax2.grid()
+
+savefile = "./png/godefreefall_with_error.png"
+plt.savefig(savefile, format="png", dpi=300)
+
 plt.show()
 
 # godefreefall_with-error.pyプログラムの終わり
