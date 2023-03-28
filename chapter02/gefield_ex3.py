@@ -24,9 +24,6 @@ print(k)
 
 # メイン実行部
 t = 0.0         # 時刻t
-# 電荷位置のプロット
-for qi in qList:
-    plt.plot(qi[0][0], qi[0][1], ".")
 
 # 係数の入力
 vx = float(input('初速度v0xを入力してください: '))
@@ -64,5 +61,10 @@ while t < tLimit:           # 打ち切り時間まで計算
 
 # グラフの表示
 plt.plot(xList, yList)  # グラフをプロット
+
+# 電荷位置のプロット
+for qi in qList:
+    plt.plot(qi[0][0], qi[0][1], ".")
+
 plt.show()
 # gefield_ex3.pyプログラムの終わり

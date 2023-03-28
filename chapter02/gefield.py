@@ -12,16 +12,16 @@ import matplotlib.pyplot as plt
 import math
 
 # 定数
-qList = (((0.0, 0.0), 10.0), ((5.0, -5.0), 5.0), ((-5.0, 5.0), 5.0))    # 電荷の位置と値
+qList = (((0.0, 0.0), 10.0), ((5.0, -5.0), 5.0))    # 電荷の位置と値
 tLimit = 20                                  # シミュレーション打ち切り時間
 rLimit = 0.1                                    # 距離rの最低値
 dt = 0.01                                       # 時刻の刻み幅
 
 # メイン実行部
 t = 0.0         # 時刻t
-# 電荷位置のプロット
-for qi in qList:
-    plt.plot(qi[0][0], qi[0][1], ".")
+# 電荷位置のプロット・・・元はここに置いていたが、そうすると何故かNGになる。
+#for qi in qList:
+#    plt.plot(qi[0][0], qi[0][1], ".")
 
 # 係数の入力
 vx = float(input('初速度v0xを入力してください: '))
@@ -57,7 +57,15 @@ while t < tLimit:           # 打ち切り時間まで計算
     if rmin < rLimit:
         break   # 電荷に非常に近づいたら終了
 
+# 電荷位置のプロット
+for qi in qList:
+    plt.plot(qi[0][0], qi[0][1], ".")
+
 # グラフの表示
 plt.plot(xList, yList)  # グラフをプロット
+
+savefile = "./png/gefield.png"
+plt.savefig(savefile, format="png", dpi=300)
+
 plt.show()
 # gefield.pyプログラムの終わり
